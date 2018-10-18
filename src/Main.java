@@ -6,20 +6,20 @@ public class Main {
         Scanner S=new Scanner(System.in);
         a = S.nextLine();
         Person ja = new Person();
-        ja.getFullName(a);
-        ja.Display();
+        ja.setFullName(a);
+        System.out.println(ja.getFullName());
     }
 }
 
 class Person{
-String name;
+private String name;
     Person(){
-        getFullName(name);
+        setFullName(name);
     }
-    void getFullName(String ime){
+    void setFullName(String ime){
         name = ime;
     }
-    void Display(){
-        System.out.println(name);
+    String getFullName(){
+        return name;
     }
 }
